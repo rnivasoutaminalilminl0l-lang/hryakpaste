@@ -341,15 +341,18 @@ function Library:RemoveFromRegistry(Instance)
     local Data = Library.RegistryMap[Instance];
 
     if Data then
-        for Idx = #Library.Registry, 1, -1 do
+        -- O(n) removal by setting to nil and using a swap marker
+        for Idx = 1, #Library.Registry do
             if Library.Registry[Idx] == Data then
-                table.remove(Library.Registry, Idx);
+                Library.Registry[Idx] = nil;
+                break;
             end;
         end;
 
-        for Idx = #Library.HudRegistry, 1, -1 do
+        for Idx = 1, #Library.HudRegistry do
             if Library.HudRegistry[Idx] == Data then
-                table.remove(Library.HudRegistry, Idx);
+                Library.HudRegistry[Idx] = nil;
+                break;
             end;
         end;
 
