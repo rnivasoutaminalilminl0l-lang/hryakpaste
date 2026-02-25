@@ -1,0 +1,17 @@
+{
+    "version": "0.0.6a",
+    "list": [
+        "grad90r.png",
+        "grad90l.png",
+        "grad180u.png",
+        "grad180d.png",
+        "grad45lrd.png",
+        "grad45lru.png",
+        "grad45rld.png",
+        "grad45rlu.png",
+        "library_main.lua",
+        "library_save.lua",
+        "library_theme.lua",
+        "chat_spam.lua"
+    ]
+}
